@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Expense Tracker</h1>
+
+        <!-- 🌙 Dark Mode Toggle -->
+        <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
+        <!-- 🎯 Target Section -->
+        <div class="target-section">
+            <h2>Set Your Spending Target</h2>
+            <form id="targetForm">
+                <input type="number" id="targetAmount" placeholder="Enter target amount" required />
+                <button type="submit">Set Target</button>
+            </form>
+            <div id="targetDisplay">No target set yet.</div>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <div class="celebration">🎉 Target Achieved! 🎉</div>
+        </div>
+
+        <!-- 💸 Expense Form -->
+        <form id="expenseForm">
+            <input type="text" id="title" placeholder="Expense Title" required />
+            <input type="number" id="amount" placeholder="Expense Amount" step="0.01" required />
+            <select id="category">
+                <option value="Food">🍔 Food</option>
+                <option value="Transport">🚗 Transport</option>
+                <option value="Shopping">🛍️ Shopping</option>
+                <option value="Bills">💡 Bills</option>
+                <option value="Other">📌 Other</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- 📊 Expense List -->
+        <div class="expense-list" id="expenseList"></div>
+
+        <!-- 📈 Chart -->
+        <canvas id="expenseChart"></canvas>
+    </div>
+
+    <!-- 🎊 Confetti -->
+    <div class="confetti"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
